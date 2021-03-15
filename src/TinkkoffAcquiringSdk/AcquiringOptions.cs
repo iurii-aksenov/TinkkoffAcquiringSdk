@@ -8,9 +8,8 @@
         public string TerminalKey { get; set; } = null!;
 
         /// <summary>
-        /// Позволяет переключать SDK с тестового режима и обратно. В тестовом режиме деньги с карты не
-        /// списываются. По-умолчанию выключен
+        /// Пароль от терминала. Выдается вместе с terminalKey
         /// </summary>
-        public bool IsDeveloperMode { get; set; } = false;
+        public string Password { get; set; } = null!;
     }
 }

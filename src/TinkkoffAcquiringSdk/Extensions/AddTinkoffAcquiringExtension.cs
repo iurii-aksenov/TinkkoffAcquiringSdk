@@ -1,6 +1,6 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using System;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
 
 namespace TinkkoffAcquiringSdk.Extensions
 {
@@ -8,7 +8,8 @@ namespace TinkkoffAcquiringSdk.Extensions
     {
         private const string SectionName = "Acquiring";
 
-        public static IServiceCollection AddTinkoffAcquiring(this IServiceCollection services, string sectionName = SectionName)
+        public static IServiceCollection AddTinkoffAcquiring(this IServiceCollection services,
+            string sectionName = SectionName)
         {
             if (services is null)
             {
@@ -17,10 +18,10 @@ namespace TinkkoffAcquiringSdk.Extensions
 
             using var serviceProvider = services.BuildServiceProvider();
             var configuration = serviceProvider.GetService<IConfiguration>();
-            var filesOptions = (configuration ?? throw new NullReferenceException("IConfiguration is null"))
+            var acquiringOptions = (configuration ?? throw new NullReferenceException("IConfiguration is null"))
                 .GetOptions<AcquiringOptions>(sectionName);
-            services.AddSingleton(filesOptions);
-            services.AddSingleton<AcquiringClient>();
+            services.AddSingleton(acquiringOptions);
+            services.AddSingleton(new AcquiringClient(acquiringOptions.TerminalKey, acquiringOptions.Password));
             return services;
         }
     }
