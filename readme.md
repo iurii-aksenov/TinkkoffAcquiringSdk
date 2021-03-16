@@ -38,6 +38,9 @@ SDK состоит из следующих модулей:
 - По возникающим вопросам просьба обращаться на [iurii.aksenov@yandex.ru][support-email]
 - Баги и feature-реквесты можно направлять в раздел [issues][issues]
 
+### Ссылки
+[Тинькофф Оплата - Документация API (https://oplata.tinkoff.ru/develop/api/payments/)]
+
 ---
 
 Eng
@@ -72,3 +75,6 @@ The main class of the module - **AcquiringClient** - provides an interface for i
 ### Support
 - If you have any questions, please contact [iurii.aksenov@yandex.ru] [support-email]
 - Bugs and feature requests can be sent to the [issues] [issues] section
+
+### Links
+[Tinkoff Payment - API Documentation (https://oplata.tinkoff.ru/develop/api/payments/)]
