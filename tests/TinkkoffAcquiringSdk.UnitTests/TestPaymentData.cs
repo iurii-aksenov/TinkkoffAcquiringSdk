@@ -2,7 +2,7 @@
 {
     public static class TestPaymentData
     {
-        public const string TestPass = "12345678";
+        public const string TestPassword = "12345678";
         public const string TestTerminalKey = "TestSDK";
         public const string TestCustomerKey = "user-key-test";
         public const string TestPayForm = "Checkout";

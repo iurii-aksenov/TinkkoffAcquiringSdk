@@ -6,14 +6,14 @@ using Xunit;
 
 namespace TinkkoffAcquiringSdk.UnitTests
 {
-    public class AcquiringClientTests
+    public class AcquiringApiClientTests
     {
-        private readonly AcquiringClient _client;
+        private readonly AcquiringApiClient _client;
 
-        public AcquiringClientTests()
+        public AcquiringApiClientTests()
         {
-            AcquiringClient.IsDeveloperMode = true;
-            _client = new AcquiringClient(TestPaymentData.TestTerminalKey, TestPaymentData.TestPass);
+            AcquiringApiClient.IsDeveloperMode = true;
+            _client = new AcquiringApiClient(TestPaymentData.TestTerminalKey, TestPaymentData.TestPassword);
         }
 
         private async Task<long?> InitSessionAsync(bool isRecurrent)

@@ -21,7 +21,7 @@ namespace TinkkoffAcquiringSdk.Extensions
             var acquiringOptions = (configuration ?? throw new NullReferenceException("IConfiguration is null"))
                 .GetOptions<AcquiringOptions>(sectionName);
             services.AddSingleton(acquiringOptions);
-            services.AddSingleton(new AcquiringClient(acquiringOptions.TerminalKey, acquiringOptions.Password));
+            services.AddSingleton(new AcquiringApiClient(acquiringOptions.TerminalKey, acquiringOptions.Password));
             return services;
         }
     }

@@ -1,13 +1,15 @@
 
 
 
-# Not official Tinkoff Acquiring SDK for C#, Net 5.0.
+# Неофициальный Tinkoff Acquiring SDK для C# / Unofficial Tinkoff Acquiring SDK for C#, Net 5.0.
 
 (ENG is below)
 
 Rus
 
-Данный SDK базируется на официальном SDK для андроида [TinkoffCreditSystems/AcquiringSdkAndroid(https://github.com/TinkoffCreditSystems/AcquiringSdkAndroid)]
+Acquiring SDK позволяет вызывать [Интернет-Эквайринг Tinkoff][acquiring]. ОФициальная документация для API [Тинькофф Оплата - Документация API][api-documentation]
+
+Данный SDK базируется на официальном SDK для андроида [TinkoffCreditSystems/AcquiringSdkAndroid][official-android-sdk], [полная документация][full-doc]. 
 
 На данный момент содержит метод GetState, который возвращает текущий статус платежа. Имеет методы расширения для ASP.Core
 
@@ -38,14 +40,14 @@ SDK состоит из следующих модулей:
 - По возникающим вопросам просьба обращаться на [iurii.aksenov@yandex.ru][support-email]
 - Баги и feature-реквесты можно направлять в раздел [issues][issues]
 
-### Ссылки
-[Тинькофф Оплата - Документация API (https://oplata.tinkoff.ru/develop/api/payments/)]
 
 ---
 
 Eng
 
-This SDK is based on the official SDK for Android [TinkoffCreditSystems/AcquiringSdkAndroid(https://github.com/TinkoffCreditSystems/AcquiringSdkAndroid)]
+The Acquiring SDK allows you to call [Internet Acquiring Tinkoff][acquiring]. Official documentation for the API [Tinkoff Payment - API Documentation][api-documentation]
+
+This SDK is based on the official Android SDK [TinkoffCreditSystems / AcquiringSdkAndroid][official-android-sdk], [full documentation][full-doc].
 
 Currently contains a GetState method that returns the current status of the payment. Has extension methods for ASP.Core
 
@@ -55,7 +57,7 @@ To get started with the SDK, you will need:
 * Password
 * Public key
 
-Which are issued after connecting to [Internet Acquiring] [acquiring].
+Which are issued after connecting to [Internet Acquiring][acquiring].
 
 The SDK allows you to customize the mode of operation (debug / prod). The default is prod mode.
 To configure debug mode, set the parameters:
@@ -73,8 +75,12 @@ It is a basic module for working with the Tinkoff Acquiring API. The module impl
 The main class of the module - **AcquiringClient** - provides an interface for interacting with the Tinkoff Acquiring API. To work, you need the keys and password of the seller (see **Getting started**).
 
 ### Support
-- If you have any questions, please contact [iurii.aksenov@yandex.ru] [support-email]
-- Bugs and feature requests can be sent to the [issues] [issues] section
+- If you have any questions, please contact [iurii.aksenov@yandex.ru][support-email]
+- Bugs and feature requests can be sent to the [issues][issues] section
 
-### Links
-[Tinkoff Payment - API Documentation (https://oplata.tinkoff.ru/develop/api/payments/)]
+[acquiring]: https://www.tinkoff.ru/business/internet-acquiring/
+[api-documentation]: https://oplata.tinkoff.ru/develop/api/payments/
+[official-android-sdk]: https://github.com/TinkoffCreditSystems/AcquiringSdkAndroid
+[full-doc]: https://github.com/TinkoffCreditSystems/AcquiringSdkAndroid/blob/master/Android%20SDK.pdf
+[support-email]: mailto:iurii.aksenov@yandex.ru
+[issues]: https://github.com/IuriiAksenov/TinkkoffAcquiringSdk/issues
