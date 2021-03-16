@@ -24,8 +24,8 @@ Acquiring SDK позволяет вызывать [Интернет-Эквайр
 SDK позволяет настроить режим работы (debug/prod). По умолчанию - режим prod.
 Чтобы настроить debug режим, установите параметры:
 ```csharp
-AcquiringSdk.isDeveloperMode = true // используется тестовый URL, деньги с карт не списываются
-AcquiringSdk.isDebug = true         // включение логирования запросов (в будущем)
+AcquiringApiClient.IsDeveloperMode = true // используется тестовый URL, деньги с карт не списываются
+AcquiringApiClient.IsDebug = true         // включение логирования запросов (в будущем)
 ```
 
 ### Структура
