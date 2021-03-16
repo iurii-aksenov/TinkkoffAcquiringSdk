@@ -12,6 +12,7 @@ namespace TinkkoffAcquiringSdk.UnitTests
 
         public AcquiringClientTests()
         {
+            AcquiringClient.IsDeveloperMode = true;
             _client = new AcquiringClient(TestPaymentData.TestTerminalKey, TestPaymentData.TestPass);
         }
 
@@ -24,7 +25,7 @@ namespace TinkkoffAcquiringSdk.UnitTests
                 ChargeFlag = isRecurrent,
                 CustomerKey = TestPaymentData.TestCustomerKey,
                 PayForm = TestPaymentData.TestPayForm,
-                Recurrent = isRecurrent,
+                Recurrent = isRecurrent
             };
             var response = await _client.InitPaymentSessionAsync(request);
 
@@ -37,10 +38,11 @@ namespace TinkkoffAcquiringSdk.UnitTests
         [Fact]
         public async Task GetState_ValidPaymentId_ReturnSuccess()
         {
-            AcquiringClient.IsDeveloperMode = true;
             var paymentId = await InitSessionAsync(false);
             var request = new GetStateRequest(paymentId.Value);
-            var response =await _client.GetStateAsync(request);
+
+            var response = await _client.GetStateAsync(request);
+
             Assert.True(response.IsSuccess && response.GetStatusType() == ResponseStatusType.New);
         }
     }
