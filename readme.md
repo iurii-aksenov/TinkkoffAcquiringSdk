@@ -1,7 +1,7 @@
 
 
 
-# Неофициальный Tinkoff Acquiring SDK для C# / Unofficial Tinkoff Acquiring SDK for C#, Net 5.0.
+# Tinkoff Acquiring SDK для C# / Tinkoff Acquiring SDK for C#, Net 5.0. (Unofficial)
 
 (ENG is below)
 
