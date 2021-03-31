@@ -36,7 +36,7 @@ namespace TinkkoffAcquiringSdk.UnitTests
 
 
         [Fact]
-        public async Task GetState_ValidPaymentId_ReturnSuccess()
+        public async Task Get_a_valid_state_after_starting_a_payment_session()
         {
             var paymentId = await InitSessionAsync(false);
             var request = new GetStateRequest(paymentId.Value);
